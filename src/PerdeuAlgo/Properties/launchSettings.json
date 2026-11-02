@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PerdeuAlgo": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5187",
+      "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development" }
+    }
+  }
+}
