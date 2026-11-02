@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/PerdeuAlgo/PerdeuAlgo.csproj" />
+  <Project Path="tests/PerdeuAlgo.Tests/PerdeuAlgo.Tests.csproj" />
+</Solution>
