@@ -16,7 +16,7 @@ dotnet restore PerdeuAlgo.slnx
 dotnet run --project src/PerdeuAlgo -- --seed
 ```
 
-Abra **http://localhost:5187**. O argumento `--seed` adiciona quatro fichas fictícias somente quando não existem registros. As contas dessas fichas têm senhas aleatórias e não são contas de acesso. Crie sua conta pela interface. Para verificar o fluxo entre pessoas, use dois navegadores ou uma janela privada com outra conta.
+Abra **http://localhost:5187**. O `--seed` adiciona quatro fichas fictícias somente quando não existem registros. As contas dessas fichas têm senhas aleatórias e não são contas de acesso. Crie sua conta pela interface. Para verificar o fluxo entre pessoas, use dois navegadores ou uma janela privada com outra conta.
 
 Sem demonstração: execute o mesmo comando sem `-- --seed`. O SQLite e as chaves de sessão são criados em `src/PerdeuAlgo/App_Data/`, excluído do Git. Os dados persistem entre reinicializações.
 
