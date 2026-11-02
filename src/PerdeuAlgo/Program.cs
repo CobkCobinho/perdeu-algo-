@@ -91,7 +91,7 @@ if (args.Contains("--seed"))
         var today = DateOnly.FromDateTime(DateTime.Now);
         service.Create(a.Id, new("found", "Um livro à espera do próximo capítulo", "Livros", "Biblioteca central", today.AddDays(-1), "Livro de capa verde encontrado na mesa de leitura. Está guardado na recepção da biblioteca.", "Há uma dedicatória manuscrita na primeira página."));
         service.Create(b.Id, new("lost", "Meu companheiro de leitura", "Livros", "Biblioteca central", today.AddDays(-2), "Perdi um livro de capa verde depois de estudar na biblioteca. Tem um valor sentimental enorme.", ""));
-        service.Create(a.Id, new("found", "Chaves com um pequeno universo", "Acessórios", "Pátio das mangueiras", today, "Molho de chaves com chaveiro de planeta, recolhido perto dos bancos do pátio.", "Uma das chaves tem a cabeça pintada de azul."));
+        service.Create(a.Id, new("found", "Chaves com um pequeno universo", "Acessórios", "Pátio das mangueiras", today, "Penca de chaves com chaveiro de planeta, recolhido perto dos bancos do pátio.", "Uma das chaves tem a cabeça pintada de azul."));
         service.Create(b.Id, new("lost", "Óculos de armação caramelo", "Acessórios", "Café do campus", today, "Óculos de grau de armação arredondada, possivelmente esquecidos no balcão do café.", ""));
     }
 }
