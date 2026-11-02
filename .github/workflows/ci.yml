@@ -1,0 +1,15 @@
+name: Build e testes
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet restore PerdeuAlgo.slnx
+      - run: dotnet build PerdeuAlgo.slnx --no-restore --configuration Release
+      - run: dotnet test PerdeuAlgo.slnx --no-build --configuration Release --logger trx
