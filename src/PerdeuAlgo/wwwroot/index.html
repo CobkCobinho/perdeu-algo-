@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Um ponto de reencontro para objetos e suas histórias. Achados e perdidos da comunidade universitária."
+    />
+    <meta name="theme-color" content="#233e35" />
+    <title>Perdeu Algo? — Objetos têm histórias.</title>
+    <link rel="icon" href="/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#mural">Ir para o mural</a>
+    <header class="topbar">
+      <a href="/" class="brand" aria-label="Perdeu Algo? início"
+        ><span class="brand-mark">P<span>?</span></span
+        ><span>Perdeu Algo?<small>O ARQUIVO DOS REENCONTROS</small></span></a
+      >
+      <nav aria-label="Principal">
+        <a href="#mural">O mural</a
+        ><button class="nav-button" id="personal">Meu arquivo</button
+        ><button class="button outline" id="account">Entrar / cadastrar</button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="small-line"></span> ACHADOS, PERDIDOS & BOAS HISTÓRIAS
+          </p>
+          <h1 id="hero-title">
+            Algumas histórias<br />merecem um<br /><em>reencontro.</em>
+          </h1>
+          <p class="intro">
+            O livro esquecido. A chave que sumiu. Aquilo que faz falta.<br />Um
+            pequeno arquivo para fazer as coisas voltarem<br class="desktop" />
+            a quem pertencem.
+          </p>
+          <div class="hero-actions">
+            <button class="button" data-create="lost">
+              Perdi alguma coisa <span aria-hidden="true">↗</span></button
+            ><button class="text-button" data-create="found">
+              Encontrei um objeto <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <p class="hero-note">FEITO DE CUIDADO. MOVIDO PELA COMUNIDADE.</p>
+        </div>
+        <div class="illustration" aria-hidden="true">
+          <div class="archive-label">
+            ARQUIVO DA COMUNIDADE <span>N.º 001</span>
+          </div>
+          <div class="paper-back"></div>
+          <div class="drawing-card">
+            <span class="card-index">EX LIBRIS · OBJETOS & MEMÓRIAS</span
+            ><svg viewBox="0 0 340 240" class="book-art">
+              <g fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M45 173 168 211 293 159 170 126Z" fill="#a56a48" />
+                <path d="M46 161 168 199 292 147M46 166 168 204 292 152" />
+                <path d="M45 150 168 187 293 135 170 102Z" fill="#d7c39d" />
+                <path d="M168 187v24M293 135v24M45 150v23" />
+                <path d="M70 127 174 157 276 114 172 84Z" fill="#314f42" />
+                <path d="M70 116 174 147 276 103M70 121 174 152 276 108" />
+                <path d="M70 104 174 135 276 92 172 61Z" fill="#456150" />
+                <path
+                  d="M174 135v22M70 104v23M276 92v22M89 105l84 25 84-35M98 103l73-30 72 21"
+                  stroke="#c8b58e"
+                />
+                <path
+                  d="m211 120 12 24 10-14 12 5-15-23"
+                  fill="#b76742"
+                  stroke="#814a33"
+                />
+                <circle cx="112" cy="57" r="16" />
+                <circle cx="148" cy="65" r="16" />
+                <path d="m128 60 4 1m32 6 35 7m-96-33-11-19m23 23-1-16" />
+                <path d="M108 216h131M88 222h165" opacity=".3" />
+              </g>
+            </svg>
+            <p>Cada objeto guarda<br /><em>um pedaço de alguém.</em></p>
+            <div class="card-bottom">CATALOGAR. CUIDAR. REENCONTRAR.</div>
+          </div>
+          <div class="round-stamp">
+            QUE BOM<br /><strong>TE ACHAR</strong><br />OUTRA VEZ
+          </div>
+        </div>
+      </section>
+      <div class="ledger-strip">
+        <span>UM PONTO DE ENCONTRO NO CAMPUS</span><span>01. REGISTRE</span
+        ><span>02. RECONHEÇA</span><span>03. REENCONTRE</span>
+      </div>
+      <section class="board" id="mural" aria-labelledby="board-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PROCURE COM CALMA. TALVEZ ESTEJA AQUI.</p>
+            <h2 id="board-title">O mural dos reencontros<span>.</span></h2>
+          </div>
+          <span
+            id="record-count"
+            class="record-count"
+            aria-live="polite"
+          ></span>
+        </div>
+        <div class="filters">
+          <div class="tabs" role="group" aria-label="Tipo de registro">
+            <button class="tab active" data-filter="all" aria-pressed="true">
+              Todos os registros</button
+            ><button class="tab" data-filter="lost" aria-pressed="false">
+              Perdidos</button
+            ><button class="tab" data-filter="found" aria-pressed="false">
+              Encontrados
+            </button>
+          </div>
+          <div class="search-row">
+            <label class="search"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="search"
+                type="search"
+                placeholder="Um livro, uma chave, um lugar…"
+                aria-label="Buscar por título, descrição ou local" /></label
+            ><label
+              ><span class="sr-only">Categoria</span
+              ><select id="category">
+                <option value="">Todas as categorias</option>
+              </select></label
+            ><label class="closed-filter"
+              ><input type="checkbox" id="closed" /> Incluir encerrados</label
+            >
+          </div>
+        </div>
+        <div id="cards" class="cards" aria-live="polite">
+          <p class="empty">Abrindo o arquivo…</p>
+        </div>
+      </section>
+      <section class="how">
+        <div>
+          <p class="eyebrow">UM POUCO DE ATENÇÃO MUDA UMA HISTÓRIA</p>
+          <h2>Encontrar é só o começo.</h2>
+        </div>
+        <p>
+          Descreva o objeto sem revelar todos os detalhes. Na hora de devolver,
+          peça uma característica que só o dono saberia. Combine a entrega em um
+          local público do campus.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <a class="footer-brand" href="/">Perdeu Algo?</a>
+      <p>Objetos têm histórias. Vamos continuar as boas.</p>
+      <span>UM ARQUIVO FEITO PARA REENCONTRAR.</span>
+    </footer>
+    <dialog id="modal" aria-labelledby="modal-title">
+      <div class="dialog-top">
+        <span class="eyebrow">PERDEU ALGO? · ARQUIVO PESSOAL</span
+        ><button id="close-modal" class="close" aria-label="Fechar janela">
+          ×
+        </button>
+      </div>
+      <div id="modal-content"></div>
+    </dialog>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </body>
+</html>
