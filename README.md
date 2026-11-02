@@ -130,7 +130,9 @@ Para consumir a API, preserve os cookies, obtenha `csrfToken` em `/api/session` 
 
 ## Decisões e limites
 
-Aplicação de portfólio para execução em uma instância. O SQLite usa uma conexão serializada em processo e transações curtas; não é uma arquitetura para tráfego elevado ou múltiplas réplicas. O esquema inicial é criado automaticamente; alterações futuras exigem migrações versionadas.
+Desenvolvi o Perdeu Algo? para meu portfólio, colocando em prática a base de conhecimentos que possuo atualmente em C#, SQL, HTML, CSS e JavaScript. O objetivo é aplicar esses conhecimentos em um projeto funcional, com regras de negócio, autenticação e testes automatizados, e evoluir a aplicação conforme meu aprendizado.
+
+Nesta primeira versão, escolhi o SQLite para facilitar a execução local, sem precisar instalar um servidor de banco de dados. A aplicação foi pensada para funcionar em uma única instância. Futuramente, a persistência pode ser adaptada para MySQL ou PostgreSQL, com ajustes no acesso aos dados, nas consultas, no gerenciamento de conexões e nas migrações do banco. Essa mudança, acompanhada de melhorias na arquitetura e na infraestrutura, pode preparar o projeto para um volume maior de dados e acessos.
 
 Cookies são HttpOnly/SameSite Strict e exigem HTTPS fora de Development. Há proteção CSRF, SQL parametrizado, escape de conteúdo na interface, CSP e limite de 12 tentativas de autenticação por IP por minuto. Sob proxy reverso, configure proxies confiáveis e cabeçalhos encaminhados antes de usar o limite por IP.
 
