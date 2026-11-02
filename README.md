@@ -1,6 +1,5 @@
 # Perdeu Algo?
 
-**Objetos têm histórias. Vamos continuar as boas.**
 
 Um arquivo de achados e perdidos para uma comunidade universitária, com estética de livraria antiga: papel creme, verde profundo, cobre e fichas de catálogo. Aplicação completa em **C# / ASP.NET Core 10**, **SQL / SQLite**, **HTML**, **CSS** e **JavaScript puro**.
 
